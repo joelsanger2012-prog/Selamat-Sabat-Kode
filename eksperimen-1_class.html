@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+  <title>Selamat Sabat!</title>
+ <meta charset="UTF-8">
+  <style>
+    body {
+     background: lightblue;
+    }
+    #layar {
+     padding-top: 8px;
+     background-color: dodgerblue; 
+     border-radius: 5px;
+     border-style: solid;
+     border-color: deepskyblue;
+     height: 590px; 
+    }
+    #alkitab  { padding-bottom: 20px; width: 580px; display: block; border-radius: 4px; border-style: inset; box-sizing: border-box; border-color: deepskyblue; object-fit: cover; margin-top: 10px;}
+    #sapateman {
+     color: navy;
+     padding-top: 5px;
+    }
+    .sapa {
+     transition: 0.2s;
+     padding: 45px;  
+     text-align: center; 
+     color: blue;      
+    }
+    .sapa:hover {
+     transform: scale(1.02); 
+     color: red;  
+    }
+    #tombolsapa {
+     color: aqua; 
+     background: blue;
+     transition: 1s;
+    }
+    #tombolsapa:active {
+     transform: translateY(-10px);
+     color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="sapa">
+    Selamat Hari Sabat!
+  </h1>
+  
+  <div id="layar">    
+    <button id="tombolsapa">Tekan Aku!</button>
+    <p id="sapateman">Halo! Selamat Sabat Teman-Teman!</p>
+   <img src="743484744_1531213452065901_4786660971318686198_n.webp" id="alkitab" alt="Gambar Alkitab">
+  </div>
+  
+  <script>
+  document.getElementById("tombolsapa").onclick = function()  {  
+  document.getElementById("sapateman").textContent = "Terima Kasih Sudah Menekan!";  
+  document.getElementById("tombolsapa").textContent = "Tekan Lagi!";
+  document.getElementById("tombolsapa").onclick = function() {
+  document.getElementById("sapateman").textContent = "Selamat Tinggal! Lihat Gambar Di Bawah Ya !!!";
+    };
+  }
+  </script>
+</body>
+</html>
